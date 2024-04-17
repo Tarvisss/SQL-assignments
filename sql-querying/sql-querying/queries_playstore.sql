@@ -29,7 +29,7 @@ SELECT app_name, price, rating FROM analytics WHERE rating < 3 ORDER BY price DE
 
 -- 8. Find all records with a min install not exceeding 50, that have a rating. 
 --      Order your results by highest rated first.
-SELECT * FROM analytics WHERE min_installs <= 50 AND rating IS NOT NULL ORDER BY rating DESC;
+SELECT app_name, price, rating FROM analytics WHERE rating < 3 ORDER BY price DESC LIMIT 1;
 
 -- 9. Find the names of all apps that are rated less than 3 with at least 10000 reviews.
 SELECT app_name FROM analytics WHERE rating < 3 AND reviews >= 10000;
